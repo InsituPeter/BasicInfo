@@ -1,7 +1,7 @@
 require("dotenv").config()
 const basicInfo =   (req, res)=>{
   if (!process.env.EMAIL || !process.env.GITHUB_URL){
-  
+   res.send ('email or github repo missing')
   }
   res.status(200).json({
       email: process.env.EMAIL,
