@@ -1,9 +1,14 @@
 const errorHandler=(err,req, res, next)=>{
-    res.status(err.statusCode).json({
+   if (statusCode= err.statusCode)
+    {res.status(err.statusCode).json({
         success: false,
         message: err.message
     })
+
 }
+  res.send ("Ooops! It appears email or github repo  might be missing")
+  
+   }
 
 
 
