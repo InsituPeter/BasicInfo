@@ -3,8 +3,8 @@ require("express-async-errors")
 const express = require ("express")
 const cors = require("cors")
 const app= express()
-const basicInfo = require("../Retrival/route")
-const notFound = require("../Retrival/notFound")
+const basicInfo = require("./route")
+const notFound = require("./notFound")
 const errorHandler= require("./error")
 const PORT = process.env.PORT||3000
 
@@ -18,4 +18,4 @@ app.use(notFound)
 app.use(errorHandler)
 
 //app.get(("/"), )
-app.listen(PORT, console.log(`This server is listening on ${PORT}`))
+app.listen(PORT, ()=>console.log(`This server is listening on ${PORT}`))
